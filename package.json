@@ -1,0 +1,22 @@
+{
+  "name": "anniversary-website",
+  "version": "1.0.0",
+  "description": "Romantic anniversary website for Kokoh & Axct Ka Lyy",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "concurrently \"npm run build:css\" \"live-server .\"",
+    "serve": "live-server ."
+  },
+  "keywords": ["anniversary", "love", "romantic", "website"],
+  "author": "Axct Ka Lyy",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "concurrently": "^8.2.0",
+    "live-server": "^1.2.2"
+  }
+}

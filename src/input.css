@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom romantic theme */
+@layer base {
+  body {
+    @apply font-lato bg-gradient-to-br from-pink-50 to-rose-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .romantic-button {
+    @apply bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-full hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .romantic-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-pink-100 p-6;
+  }
+  
+  .romantic-text {
+    @apply text-gray-700 leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-romantic-gradient {
+    @apply bg-gradient-to-r from-pink-600 to-red-600 bg-clip-text text-transparent;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fce7f3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ec4899, #dc2626);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #be185d, #b91c1c);
+}

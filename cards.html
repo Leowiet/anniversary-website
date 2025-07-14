@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story - 1 Year Anniversary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for romantic styling */
+        :root {
+            --primary-pink: #fce7f3;
+            --secondary-pink: #f9a8d4;
+            --accent-pink: #ec4899;
+            --soft-purple: #e9d5ff;
+            --text-dark: #374151;
+            --text-light: #6b7280;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--soft-purple) 100%);
+            min-height: 100vh;
+        }
+
+        .dancing-script {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .memory-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .memory-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideInLeft 0.7s ease forwards;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            animation: slideInRight 0.7s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, var(--secondary-pink), var(--accent-pink));
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+        }
+
+        .nav-button:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .media-container {
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .media-item {
+            width: 100%;
+            max-width: 100%;
+            max-height: 400px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .final-card {
+            background: linear-gradient(135deg, var(--accent-pink), var(--secondary-pink));
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .heart-float {
+            position: fixed;
+            color: var(--accent-pink);
+            font-size: 20px;
+            pointer-events: none;
+            animation: heartFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--secondary-pink), var(--accent-pink));
+            height: 4px;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .memory-card {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Floating Main Page Button (left top corner) -->
+    <a href="index.html" class="fixed top-6 left-6 z-50 bg-gradient-to-r from-pink-400 via-pink-300 to-purple-300 text-white font-semibold px-5 py-2 rounded-full shadow-lg flex items-center gap-2 hover:scale-105 hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400" style="backdrop-filter: blur(6px);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6m-6 0v6m0-6H7m6 0H7" />
+        </svg>
+        Main Page
+    </a>
+    <!-- Background Hearts -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="heart-float" style="top: 10%; left: 10%; animation-delay: 0s;">💕</div>
+        <div class="heart-float" style="top: 20%; right: 15%; animation-delay: 1s;">💖</div>
+        <div class="heart-float" style="bottom: 30%; left: 20%; animation-delay: 2s;">💗</div>
+        <div class="heart-float" style="bottom: 10%; right: 10%; animation-delay: 1.5s;">💕</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-8 fade-in">
+            <h1 class="dancing-script text-5xl md:text-6xl font-bold text-pink-600 mb-2">Our Love Story</h1>
+            <p class="text-lg text-gray-600 font-medium">One Year of Beautiful Memories</p>
+            
+            <!-- Progress Bar -->
+            <div class="w-64 bg-white bg-opacity-50 rounded-full h-1 mt-4 mx-auto">
+                <div id="progressBar" class="progress-bar h-1 rounded-full" style="width: 5.56%"></div>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">
+                <span id="currentCard">1</span> of <span id="totalCards">18</span>
+            </p>
+        </div>
+
+        <!-- Memory Card Container -->
+        <div class="w-full max-w-4xl mx-auto">
+            <div id="memoryCard" class="memory-card rounded-2xl p-6 md:p-8 mb-8">
+                <!-- Card content will be injected here -->
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex space-x-4">
+            <button id="prevBtn" class="nav-button text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2 disabled:opacity-50">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span>Previous</span>
+            </button>
+            
+            <button id="nextBtn" class="nav-button text-white px-6 py-3 rounded-full font-medium flex items-center space-x-2">
+                <span>Next</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Memory cards data
+        // galleryData from index.html
+        const memoryCards = [
+            {
+                id: 1,
+                media: [{ type: 'image', src: 'assets/firstconvo.jpg' }],
+                headline: "Our First Conversation",
+                text: "ဒါလေးက bbyတို့ရဲ့ first conversationလေးအဲ့အကြောင်းကိုပြန်ပြောရရင်   အဲ့နေ့က ကိုကို့ကbby ac​တောင်းတော့ Jinnieကို Jennieလို့ကြားပြီး ငါ့ကောင်မလေးနာမည်တယ့်😆အဲ့လိုနဲkpop singer Jennieနဲ့မှားပြီးရှာမတွေ့ဖူး acကိုမနေနိုင်တယ့် bbyကပဲ ကိုကို့acရှာမှ စကားတေပြောခဲ့ရတာတကယ်ကျလေ အဲ့နေ့က ကျောင်းကနေပြန်ရောက်ကတည်းက ကိုကို့msgကိုမျှော်နေတာကိုကို့ပြောသလိုပဲ Jennieမဟုတ်တယ့် Jinnieက ကိုကို့ကောင်မလေးဖြစ်လာရတယ်နော်✨️"
+            },
+            {
+                id: 2,
+                media: [{ type: 'image', src: 'assets/beginning.jpg' }],
+                headline: "The beginning of my love",
+                text: "ဒီပုံလေးက ကိုကို့အပေါ် သံယောဇဥ်တွယ်မိတယ့်အစပေါ့ဘယ်ရက်မှာ အဲ့လိုပြောခဲ့လည်း မမှတ်မိပေမယ့် အမှတ်ရတာကတော့ ကိုကို့ရဲ့ဂရုစိုက်မှုတေပဲသက်တံ့ပေါ်တာလေး bbyမမြင်မှာစိုးလို့ bby​အတွက်ဆိုပြီး ကိုကို့ရိုက်ပေးတယ့်ပုံလေးကလေ ကိုကို့ကိုစပြီး ချစ်လာစေတာပဲအစကတော့ အော် ဒီကောင်လေးက ငါ့typeမဟုတ်ဘူး သူကsocialကျတယ် ငါနဲ့keyမကိုက်ဘူးလို့ထင်ခဲ့ပေမယ့် ဒီပုံလေးမြင်ပြီးနောက်ပိုင်း စချစ်မိလာတယ်နင့်အတွက်ဆိုပြီး အမှတ်တရပုံလေးရယ်မိုးခြိမ်းရင်ကြောက်နေမှာစိုးလို့ ဖုန်းလှမ်းဆက်ချင်ခဲ့တာဆိုတာရယ်Bbyကိုအဲ့လိုဂရုတစိုက်တွေးပေးတာ ကိုကို့ပထမဆုံးပါပဲ 🌈 "
+            },
+            {
+                id: 3,
+                media: [{ type: 'image', src: 'assets/tissue.jpg' }],
+                headline: "Koko's feeling lyy twy cxa rayy htr tl tissue lyy",
+                text: "ဒီtissueလေး ကိုကို့သိမ်းထားသလားမသိပေမယ့် bbyအတွက် ဒါလေးက ပြန်ကြည့်တိုင်းကြည်နူးစရာလေးဖြစ်နေတယ် ကိုကို့ရယ်ကိုကို့ရေးထားတာမြင်ခါစကတော့ ရှက်တာပေါ့ဒါမယ့်လည်း ခုကျ ပြန်ကြည့်ရင် သဘောကျစရာကောင်းတယ် 🎀"
+            },
+            {
+                id: 4,
+                media: [{ type: 'image', src: 'assets/firstdate.jpg' }],
+                headline: "First date",
+                text: "Bbyတို့ရဲ့ first dateလေးလည်းဖြစ်စလို rsရဲ့ first day လေးလည်းဖြစ်တယ်နော်မိုးလေးတွေက တဖွဲဖွဲကျနေတာ ကိုကို့နဲ့ဆိုင်ကယ်အတူစီးခါစတုန်းက bbyရှက်နေတာဒီကောင်လေးကကျ bbyနဲ့တွေ့ရတော့မှာမလို့ ခုန်ပေါက်နေတယ်တယ့် 🙄ဒီပုံလေးကို ကိုကို့သဘောကျတယ်ဆိုလို့ bbyက ထည့်သုံးလိုက်တာအဲ့ပုံလေးရိုက်တော့ အမှတ်ရစရာလေးက ငါ့ကောင်မလေးအလှပြင်နေတယ် နေအုံးဆိုတာလေးပဲပြီးကျ bbyလက်လေးကိုင်တာရယ်ကိုကို့ခါးကိုဖက်ထားတယ့် bbyလက်လေးကိုကိုင်ပြီး ဆိုင်ကယ်စီးရတာရယ်ကိုကို့ဆိုင်ကယ်စီးနေတုန်း အသည်းယားလို့ bbyက ကိုကို့ပါးလေးနမ်းခဲ့တာရယ်အကုန်လုံးက သဘောကျစရာချည်းပဲFirst dateလေးက bbyရဲ့ fav memoriesထဲက တခုပါပဲ❣️"
+            },
+            {
+                id: 5,
+                media: [{ type: 'video', src: 'assets/gift.mp4' }],
+                headline: "First gift I received from kokoh 🎁 ",
+                text: "ဒီbraceletလေးက bbyကိုယ်တိုင်ဝယ်ခိုင်းတယ်ဆိုပေမယ့် ကိုကို့ဝတ်ပေးလိုက်တာလေးက bbyအတွက် မေ့မရတယ့်အချိန်လေးတခုပါပဲ ကိုကို့Bbyအတွက် ကိုကို့ပေးသမျှအရာတိုင်းက တန်ဖိုးရှိတယ် တန်ဖိုးနည်းနည်း များများ ကိုကို့ပေးထားလို့ကို သဘောကျတာbbyကို ကိုကို့ဘယ်လောက်ချစ်ကြောင်းရေးထားတယ့်  tissueလေးပေးရင်တောင်မှ bby​အတွက်တန်ဖိုးထားစရာလေးပါပဲ 💖"
+            },
+            {
+                id: 6,
+                media: [{ type: 'image', src: 'assets/confessfeeling.jpg' }],
+                headline: "First time kokoh confessed his feelings",
+                text: "ဒီစာလေးတွေဖတ်ရတာ bbyအတွက် တခါမှရိုးမသွားသလို အရမ်းလည်းသဘောကျတယ်ကိုကို့ဆီက အဲ့လိုကြားလိမ့်မယ်လို့ တခါမှမျှော်လင့်မထားဘူး bbyဘက်ကလည်း ကိုကို့ကိုချစ်ခဲ့နေတယ်ဆိုတာမှန်ပေမယ့် ကိုကို့ဘက်က bbyကို မြတ်မြတ်နိုးနိုး ပြန်ချစ်မယ်လို့ ထင်မထားခဲ့မိတာခုလိုမျိုး မြတ်မြတ်နိုးနိုးချစ်ပေးလို့ ကျေးဇူးပါနော် ကိုကို့ 🌷"
+            },
+            {
+                id: 7,
+                media: [{ type: 'image', src: 'assets/1monthsary.jpg' }],
+                headline: "1monthsary",
+                text: "Bbyတို့ရဲ့ တစ်လပြည့်လေးကလည်း ခုလို 1yr anniversaryဆိုတယ့်လမ်းရဲ့အစလေးဖြစ်လို့ အမှတ်ရစရာတွေထဲကတခုပါပဲအဲဒီညမှာ ကိုကို့ရော bbyရော 12နာရီထိ စောင့်ပြီး letterလေးတေပို့ပေးကြတာနော် ကိုကို့ကလေ bby​ဘယ်သူ့ကိုမှမချစ်ဖူးတယ့် အချစ်ဦးလေးပါပဲ💌 "
+            },
+            {
+                id: 8,
+                media: [{ type: 'image', src: 'assets/seconddate.jpg' }],
+                headline: "Second Date",
+                text: "Second dateလေးကလည်း bbyတို့အတွက် memorable dateလေးပါပဲအဲ့နေ့မှာမှ ဒီကောင်လေးကို စပြီးဖက်တာဆိုတော့🙄ပြီးကျ တခြားသူငယ်ချင်းတွေနဲ့ရော unoဆော့တာကျောင်းကနေထခိုးထွက်ပြီး ဆော့​တုန်းက ကိုကို့နဲ့bbyနဲ့ပေါင်းပြီး bby​သူငယ်ချင်းတွေကို ညစ်ကြတာ ကိုကို့သိလား ကိုကို့ကိုဖက်ရတာbbyအရမ်းကြိုက်တယ်Bbyရင်ထဲမှာ နွေးထွေးမှုတခုရလိုက်သလိုပါပဲ"
+            },
+            {
+                id: 9,
+                media: [{ type: 'video', src: 'assets/handkiss.mp4' }],
+                headline: "Hand kiss",
+                text: "ကိုကို့ရဲ့ hand kissကလည်း bby​ရဲ့favထဲကတခုပါပဲFirst dateမှာကတည်းက လက်လေးကို တယုတယနမ်းတာလေးသဘောကျနေတာ Second dateကျ သဘောကျလို့ဆိုပြီး vdရိုက် ပုံတေရိုက်ထားလိုက်တာလေ 🙄ထိုင်ခုံကို အတင်းသူ့ဆီဆွဲယူလိုက်တာလေးလည်း သတိရနေတာကိုကို့နဲ့ပတ်သက်ရင် bbyအတွက် အရာရာက အမှတ်တရတေချည်း ပြည့်နေတာ🤍"
+            },
+            {
+                id: 10,
+                media: [{ type: 'image', src: 'assets/invitation.jpg' }],
+                headline: "First invitation attended together ",
+                text: "Bbyတို့ ပထမဆုံးတူတူတက်ခွင့်ရတယ့် ပွဲလေးBbyထင်မထားဘူး ခုလိုတူတူတွဲပြီးပုံရိုက်လို့ရမယ်ဆိုတာကိုကို့နောက်ကနေ ကိုကို့ကိုဖက်ပြီးလိုက်ရတာ အကြိုက်ဆုံးပဲကိုကို့​ပြောသလိုပါပဲ မသိရင် မိဘတွေကသဘောတူထားတယ့် သူတေကျလို့ဒီနေ့လေးကို ပြန်တွေးတိုင်း bby​အရမ်းကိုပျော်ရပါတယ် 💐"
+            },
+            {
+                id: 11,
+                media: [{ type: 'image', src: 'assets/doubledate.jpg' }],
+                headline: "Double Date",
+                text: "ဒီရက်လေးက bbyတို့ရဲ့နောက်ဆုံးdateမတိုင်ခင် dateလေးနော်Bby​သူငယ်ချင်းနဲ့လည်းတူတူရှိခဲ့ရတယ်ကိုကို့နဲ့တူတူ ဆိုင်ကယ်လည်း ပတ်စီးခဲ့ရတယ်ကိုကို့အင်္ကျီလေးလည်း ဝတ်ခဲ့ရတယ်Bbyလေ ကိုကို့​အင်္ကျီဝတ်ရတာအကြိုက်ဆုံးပဲရေမွှေးနံ့လေးစွဲနေတယ့် ကိုကို့ကိုယ်သင်းနံ့လေးက်ု bby​အကြိုက်ဆုံးပဲ💜"
+            },
+            {
+                id: 12,
+                media: [{ type: 'image', src: 'assets/breakfastdate.jpg' }],
+                headline: "Breakfast Date",
+                text: "Bbyတို့ရဲ့ဆန္ဒတွေထဲ တခုအပါအဝင်ဖြစ်တယ့် မနက်စာတူတူ စားချင်တယ်ဆိုတာလည်း တကယ်ဖြစ်လာတယ့်နေ့ပဲBbyမကြိုက်တာတွေ ဖယ်ပေးတာလေးရော သဘောကျတယ်Bbyအဲ့တုန်းက တွေးခဲ့တာက ကိုကို့နဲ့ဆိုရည်မှန်းထားတာတေအားလုံးပြည့်လာရတယ်ဆိုပြီး တွေးခဲ့တာမမျှော်လင့်ထားတာတေလည်းဖြစ်လာခဲ့ပေမယ့် bbyတို့တူတူရှေ့ဆက်ခဲ့ကြတယ်နောက်လည်း ကိုကို့နဲ့ breakfastပေါင်းများစွာကို အတူစားသွားချင်တယ် 🥘"
+            },
+            {
+                id: 13,
+                media: [{ type: 'image', src: 'assets/shoe.jpg' }],
+                headline: "First time putting my heels on",
+                text: "ပထမဆုံးပုံလေးက ကိုကို့bbyကို စပြီးဖိနပ်စီးပေးတာတော့ မဟုတ်ဘူးအဲ့အရင်၂ခေါက်လောက်မှာလည်း စီးပေးဖူးတယ်ဒီပုံလေးက bbyအကြိုက်ဆုံးထဲကတစ်ပုံလေးကိုကို့အဲ့လိုဖိနပ်စီးပေးတာလေး bbyအရမ်းသဘောကျတာ ကိုကို့ကိုခိုင်းချင်လို့ ဘုန်းနိမ့်စေချင်လို့မဟုတ်ပဲ bbyကိုအရေးတယူ ဂရုတစိုက်စီးပေးလို့ bbyသဘောကျတာ 💞ဒုတိယပုံလေးကတော့ နောက်ဆုံးအကြိမ်ဖိနပ်စီးပေးတာပဲကိုကို့ဖိနပ်လေးစီးပေးတာလည်း bbyသဘောကျတာပဲကိုကို့နဲ့ပတ်သက်ရင် အရာရာကိုbby​သဘောကျတယ် Bbyကို ခုလိုအရာရာမှာဂရုစိုက်ပေးလို့ကျေးဇူးပါနော် ကိုကို့🫂"
+            },
+            {
+                id: 14,
+                media: [{ type: 'image', src: 'assets/dora.jpg' }],
+                headline: "Dora Doll",
+                text: "Doraရုပ်လေးက ကိုကို့ပထမဆုံးပေးဖူးတယ့် အရုပ်လေးနော် Bbyအရမ်း တန်ဖိုးထားတယ် ကိုကို့ပေးတယ့်အရာမှန်သမျှကိုအထူးသဖြင့် doraလေးက ကိုကို့ကိုယ်ပွားအရုပ်လေးသူ့ကိုbbyနားထားရင် ကိုကို့bbyနားမှာရှိသလိုမျိုးပဲကိုကို့မဟုတ်ဘူးဆိုရင်တောင် ကိုကို့ပေးထားတယ့်အရုပ်လေးမလို့ အနည်းဆုံးတော့ ကိုကို့အငွေ့အသက်လေးရပြီး bbyကိုစိတ်သက်သာရာရစေတယ်🧸"
+            },
+            {
+                id: 15,
+                media: [{ type: 'image', src: 'assets/rose.jpg' }],
+                headline: "Roses from kokoh",
+                text: "ကိုကို့ပေးတယ့်နှင်းဆီလေးတွေကလည်း bby favတွေထဲက တခုပါပဲကိုကို့က bbyကိုပန်းပေးတယ့် ပထမဆုံးသူပဲBbyအရမ်းတန်ဖိုးထားတယ် ညှိုးထားတယ့်သိမ်းထားတုန်းပဲပန်းလေးတွေရတာ bbyသဘောကျသလို ကိုကို့ကိုပန်းပေးရတာလည်း bby​ကြိုက်တယ်ahowဒုတိယပေးတယ့်ပန်းလေးက ကိုကို့မေမေဝယ်ပေးတာဆိုတော့ bby၂ထပ်ကွင်းပျော်ရတယ်ဘာလို့ဆို ကိုကို့မေမေကလည်းbby​ကို​ချစ်ပေးလို့🌹"
+            },
+            {
+                id: 16,
+                media: [{ type: 'image', src: 'assets/Ewords.jpg' }],
+                headline: "Encouraging words",
+                text: "Bbyလဲကျတယ့်အချိန်တိုင်း ကိုကို့ရှိနေပေးတယ့်အတွက်ကျေးဇူးပါနော် ကိုကို့ကတော့ မသိလောက်ဘူးဆိုပေမယ့် ကိုကို့ပြောတယ့် “ကိုကို့ရှိတယ်နော်” ဆိုတယ့် စကားတခွန်းက bbyအတွက် အရမ်းအားဖြစ်စေတယ်တခါတလေမှာ bbyအရှုံးပေးလိုက်ချင်ပေမယ့် ကိုကို့အတွက် အရာရာမှာပြည့်စုံနေတယ့် ကောင်မလေးတယောက်ဖြစ်အောင်ဆိုတယ့်စိတ်နဲ့ bbyပင်ပန်းလည်းကြိုးစားသွားတာကိုကို့သာbbyနားမှာ အမြဲရှိပေး အဲ့တာဆို bbyက ဘယ်အရာဘယ်လောက်ခက်ပါစေ ကျော်ဖြတ်နိုင်မယ်လို့ bbyယုံကြည်တယ် 🍀"
+            },
+            {
+                id: 17,
+                media: [{ type: 'image', src: '' }],
+                headline: "Dreams for the Future",
+                text: "ကိုကို့နဲ့ဆို အမှတ်တရတေကပြောမကုန်အောင် အရမ်းများသလို bbyအတွက် အရမ်းအဖိုးတန်တယ်ကိုကို့​နဲ့တွေ့ရင်ရနေကျ ကိုကို့ရေမွှေးနံ့လေးကအစ ကိုကို့ဝတ်ခဲ့တယ့်အင်္ကျီတိုင်းကိုလည်း bbyအမြဲအမှတ်ရတယ်ကိုကို့နဲ့တူတူအမှတ်တရတွေထပ်ပြီး ဖန်တီးသွားချင်တယ်ဘဝဆိုတာ အကောင်းအဆိုးဒွန်တွဲနေလို့ အမှတ်တရတွေထဲမှာ ရန်ဖြစ်တာတွေ ဘာတွေလည်းပါမယ်ဆိုရင်တောင် bbyစိတ်မညစ်ပါဘူးဘာလို့လည်းဆိုရင် ကိုကို့​ကိုချစ်​လို့ပဲတတ်နိုင်သမျှ ကောင်းတယ့်​အမှတ်တရလေးတွေချည်း ဖန်တီးသွားကြမယ်နော် ကိုကို့ရှေ့ဆက်ကြုံရမယ့် အခက်အခဲတွေကိုလည်း အတူတူရင်ဆိုင်သွားကြမယ်Bbyဘဝထဲကို ရောက်လာပေးတယ့်အတွက်လည်း ကျေးဇူးတင်ပါတယ် ကိုကို့Bbyအမြဲပြောနေကျစကားလေးကိုထပ်ပြောချင်တယ် “ကိုကို့က bbyအတွက် ဘုရားပေးတယ့်ဆုလာဘ်လေးတခုပါပဲ💗” "
+            }
+        ];
+
+        // Current card index
+        let currentIndex = 0;
+
+        // DOM elements
+        const memoryCardElement = document.getElementById('memoryCard');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentCardElement = document.getElementById('currentCard');
+        const totalCardsElement = document.getElementById('totalCards');
+        const progressBar = document.getElementById('progressBar');
+
+        // Initialize
+        function init() {
+            totalCardsElement.textContent = memoryCards.length;
+            renderCard();
+            updateNavigation();
+        }
+
+        // Render current card
+        function renderCard() {
+            const card = memoryCards[currentIndex];
+            // Make last card special
+            const isFinal = currentIndex === memoryCards.length - 1;
+            
+            // Update progress
+            currentCardElement.textContent = currentIndex + 1;
+            const progressPercent = ((currentIndex + 1) / memoryCards.length) * 100;
+            progressBar.style.width = progressPercent + '%';
+
+            // Create media HTML
+            let mediaHTML = '';
+            if (!isFinal && card.media && Array.isArray(card.media)) {
+                mediaHTML = '<div class="media-container mb-6 md:mb-0 md:mr-8 md:w-1/2">';
+                if (card.media.length === 1) {
+                    const mediaObj = card.media[0];
+                    if (mediaObj.type === 'video') {
+                        mediaHTML += `
+                            <video class="media-item" controls>
+                                <source src="${mediaObj.src}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        `;
+                    } else if (mediaObj.type === 'image') {
+                        mediaHTML += `<img src="${mediaObj.src}" alt="Memory ${card.id}" class="media-item">`;
+                    }
+                } else {
+                    // Multiple media items
+                    mediaHTML += '<div class="grid grid-cols-2 gap-2">';
+                    card.media.forEach(mediaObj => {
+                        if (mediaObj.type === 'video') {
+                            mediaHTML += `
+                                <video class="media-item" controls>
+                                    <source src="${mediaObj.src}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            `;
+                        } else if (mediaObj.type === 'image') {
+                            mediaHTML += `<img src="${mediaObj.src}" alt="Memory ${card.id}" class="media-item">`;
+                        }
+                    });
+                    mediaHTML += '</div>';
+                }
+                mediaHTML += '</div>';
+            }
+
+            // Create card HTML
+            let cardHTML = '';
+            if (isFinal) {
+                cardHTML = `
+                    <div class="flex flex-col items-center justify-center text-center py-12 px-4">
+                        <div class="mb-6 animate-bounce">
+                            <span style="font-size: 3rem;">💖</span>
+                        </div>
+                        <h2 class="dancing-script text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">${card.headline}</h2>
+                        <p class="text-white text-lg md:text-2xl leading-relaxed font-semibold drop-shadow-lg fade-in" style="animation-delay: 0.2s;">
+                            ${card.text}
+                        </p>
+                        <div class="mt-8 animate-pulse">
+                            <span style="font-size: 2rem;">💕💗💝</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                cardHTML = `
+                    <div class="flex flex-col md:flex-row items-center">
+                        ${mediaHTML}
+                        <div class="md:w-1/2">
+                            <h2 class="dancing-script text-3xl md:text-4xl font-bold text-pink-600 mb-4 slide-in-right">
+                                ${card.headline}
+                            </h2>
+                            <p class="text-gray-700 text-base leading-relaxed slide-in-right" style="animation-delay: 0.2s;">
+                                ${card.text}
+                            </p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Apply final card styling
+            if (isFinal) {
+                memoryCardElement.className = 'memory-card final-card rounded-2xl p-6 md:p-8 mb-8';
+            } else {
+                memoryCardElement.className = 'memory-card rounded-2xl p-6 md:p-8 mb-8';
+            }
+
+            // Add fade-in animation
+            memoryCardElement.style.opacity = '0';
+            memoryCardElement.innerHTML = cardHTML;
+            
+            setTimeout(() => {
+                memoryCardElement.style.opacity = '1';
+                memoryCardElement.style.transition = 'opacity 0.5s ease';
+            }, 100);
+        }
+
+        // Update navigation buttons
+        function updateNavigation() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === memoryCards.length - 1;
+        }
+
+        // Navigate to previous card
+        function goToPrevious() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderCard();
+                updateNavigation();
+            }
+        }
+
+        // Navigate to next card
+        function goToNext() {
+            if (currentIndex < memoryCards.length - 1) {
+                currentIndex++;
+                renderCard();
+                updateNavigation();
+            }
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', goToPrevious);
+        nextBtn.addEventListener('click', goToNext);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') goToPrevious();
+            if (e.key === 'ArrowRight') goToNext();
+        });
+
+        // Initialize the app
+        init();
+
+        // Add floating hearts periodically
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.className = 'heart-float';
+            heart.textContent = ['💕', '💖', '💗', '💝'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.top = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }, 5000);
+    </script>
+</body>
+</html>
